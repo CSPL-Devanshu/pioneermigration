@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="lblVoucherNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVoucherNumber</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVoucherNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblVoucherDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVoucherDate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVoucherDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblVendorAccNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVendorAccNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVendorAccNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblVendorAccName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVendorAccName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVendorAccName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblGLAcc">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblGLAcc</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblGLAcc</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblGLAccName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblGLAccName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblGLAccName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblCurrencyCode">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblCurrencyCode</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblCurrencyCode</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblAmount</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblPostingDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblPostingDate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblPostingDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblPaymentTerm">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblPaymentTerm</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblPaymentTerm</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblBankPaymentDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblBankPaymentDate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblBankPaymentDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblPaymentDocNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblPaymentDocNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblPaymentDocNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblJurnalentryDesc">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblJurnalentryDesc</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblJurnalentryDesc</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="DocumentNo_VendorLedgerEntry">
+          <DataField>DocumentNo_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_VendorLedgerEntry">
+          <DataField>ExternalDocumentNo_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentDate_VendorLedgerEntry">
+          <DataField>DocumentDate_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="VendorNo_VendorLedgerEntry">
+          <DataField>VendorNo_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="VendorName_VendorLedgerEntry">
+          <DataField>VendorName_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="GLAcc">
+          <DataField>GLAcc</DataField>
+        </Field>
+        <Field Name="GLAccountName">
+          <DataField>GLAccountName</DataField>
+        </Field>
+        <Field Name="CurrencyCode_VendorLedgerEntry">
+          <DataField>CurrencyCode_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_VendorLedgerEntry">
+          <DataField>Amount_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_VendorLedgerEntry">
+          <DataField>PostingDate_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="PaymentTerm">
+          <DataField>PaymentTerm</DataField>
+        </Field>
+        <Field Name="PaymentDate_VendorLedgerEntry">
+          <DataField>PaymentDate_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="PaymentDocumentNo_VendorLedgerEntry">
+          <DataField>PaymentDocumentNo_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="Description_VendorLedgerEntry">
+          <DataField>Description_VendorLedgerEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

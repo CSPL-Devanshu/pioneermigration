@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="lblAccNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblAccNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblAccNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblAccName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblAccName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblAccName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblBlankLoc">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblBlankLoc</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblBlankLoc</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblGSTAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblGSTAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblGSTAmount</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblNonGSTAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblNonGSTAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblNonGSTAmount</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_GLAccount">
+          <DataField>No_GLAccount</DataField>
+        </Field>
+        <Field Name="Name_GLAccount">
+          <DataField>Name_GLAccount</DataField>
+        </Field>
+        <Field Name="BlankLocGSTAmt">
+          <DataField>BlankLocGSTAmt</DataField>
+        </Field>
+        <Field Name="BlankLocGSTAmtFormat">
+          <DataField>BlankLocGSTAmtFormat</DataField>
+        </Field>
+        <Field Name="BlankLocNonGSTAmt">
+          <DataField>BlankLocNonGSTAmt</DataField>
+        </Field>
+        <Field Name="BlankLocNonGSTAmtFormat">
+          <DataField>BlankLocNonGSTAmtFormat</DataField>
+        </Field>
+        <Field Name="Code_Location">
+          <DataField>Code_Location</DataField>
+        </Field>
+        <Field Name="GSTAmount">
+          <DataField>GSTAmount</DataField>
+        </Field>
+        <Field Name="GSTAmountFormat">
+          <DataField>GSTAmountFormat</DataField>
+        </Field>
+        <Field Name="NonGSTAmount">
+          <DataField>NonGSTAmount</DataField>
+        </Field>
+        <Field Name="NonGSTAmountFormat">
+          <DataField>NonGSTAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

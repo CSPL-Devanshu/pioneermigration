@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="lblSrNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblSrNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblSrNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblDescription">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDescription</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDescription</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblHSA">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblHSA</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblHSA</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblGSTGroupType">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblGSTGroupType</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblGSTGroupType</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblQty">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblQty</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblQty</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblUOM">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblUOM</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblUOM</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblUnitPrice">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblUnitPrice</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblUnitPrice</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblAmount</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblDiscount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDiscount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDiscount</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblTaxAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblTaxAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblTaxAmount</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblCGST">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblCGST</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblCGST</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblSGST">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblSGST</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblSGST</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblIGST">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblIGST</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblIGST</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblCESS">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblCESS</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblCESS</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblTotal">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblTotal</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblTotal</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblFreightCharges">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblFreightCharges</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblFreightCharges</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblLoadingAndPackingCharges">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblLoadingAndPackingCharges</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblLoadingAndPackingCharges</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="iblInsuranceCharges">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>iblInsuranceCharges</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>iblInsuranceCharges</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblOtherCharges">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblOtherCharges</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblOtherCharges</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblInvoiceTotal">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblInvoiceTotal</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblInvoiceTotal</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblGSTNNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblGSTNNumber</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblGSTNNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblTaxIsPayableOnReverseCharge">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblTaxIsPayableOnReverseCharge</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblTaxIsPayableOnReverseCharge</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblInvoiceSerialNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblInvoiceSerialNumber</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblInvoiceSerialNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblInvoiceDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblInvoiceDate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblInvoiceDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblTransportationModeApplyForSupplyofGoodsOnly">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblTransportationModeApplyForSupplyofGoodsOnly</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblTransportationModeApplyForSupplyofGoodsOnly</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblVehNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVehNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVehNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblDateTimeofSupply">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDateTimeofSupply</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDateTimeofSupply</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblPlaceofSupply">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblPlaceofSupply</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblPlaceofSupply</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblDetailsofReceiverBilledto">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDetailsofReceiverBilledto</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDetailsofReceiverBilledto</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblDetailsofConsigneeShippedto">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDetailsofConsigneeShippedto</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDetailsofConsigneeShippedto</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblGSTINUniqueID">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblGSTINUniqueID</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblGSTINUniqueID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblTotalGST">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblTotalGST</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblTotalGST</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SalesPerName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SalesPerName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SalesPerName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtDocNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ExtDocNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ExtDocNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblTailorName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblTailorName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblTailorName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblInteriorName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblInteriorName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblInteriorName</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_SalesInvoiceHeader">
+          <DataField>No_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="Picture_CompanyInfo">
+          <DataField>Picture_CompanyInfo</DataField>
+        </Field>
+        <Field Name="OutputNo">
+          <DataField>OutputNo</DataField>
+        </Field>
+        <Field Name="CopyText">
+          <DataField>CopyText</DataField>
+        </Field>
+        <Field Name="PageText">
+          <DataField>PageText</DataField>
+        </Field>
+        <Field Name="PageNoText">
+          <DataField>PageNoText</DataField>
+        </Field>
+        <Field Name="IRNHash_SalesInvoiceHeader">
+          <DataField>IRNHash_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="CurrencyCode_SalesInvoiceHeader">
+          <DataField>CurrencyCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="GSTCustomerType_SalesInvoiceHeader">
+          <DataField>GSTCustomerType_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="Text011">
+          <DataField>Text011</DataField>
+        </Field>
+        <Field Name="GSTRegistrationNo_recCustomer">
+          <DataField>GSTRegistrationNo_recCustomer</DataField>
+        </Field>
+        <Field Name="Name_recLocation">
+          <DataField>Name_recLocation</DataField>
+        </Field>
+        <Field Name="Address_recLocation">
+          <DataField>Address_recLocation</DataField>
+        </Field>
+        <Field Name="Address2_recLocation">
+          <DataField>Address2_recLocation</DataField>
+        </Field>
+        <Field Name="City_recLocation">
+          <DataField>City_recLocation</DataField>
+        </Field>
+        <Field Name="PostCode_recLocation">
+          <DataField>PostCode_recLocation</DataField>
+        </Field>
+        <Field Name="StateCode_recLocation">
+          <DataField>StateCode_recLocation</DataField>
+        </Field>
+        <Field Name="Location_Email">
+          <DataField>Location_Email</DataField>
+        </Field>
+        <Field Name="Location_Phone">
+          <DataField>Location_Phone</DataField>
+        </Field>
+        <Field Name="Name_recCountry">
+          <DataField>Name_recCountry</DataField>
+        </Field>
+        <Field Name="TINNo_recLocation">
+          <DataField>TINNo_recLocation</DataField>
+        </Field>
+        <Field Name="GSTRegistrationNo_recLocation">
+          <DataField>GSTRegistrationNo_recLocation</DataField>
+        </Field>
+        <Field Name="LocationARNNo_recLocation">
+          <DataField>LocationARNNo_recLocation</DataField>
+        </Field>
+        <Field Name="LocationARNDate_recLocation">
+          <DataField>LocationARNDate_recLocation</DataField>
+        </Field>
+        <Field Name="TersMs_1">
+          <DataField>TersMs_1</DataField>
+        </Field>
+        <Field Name="TersMs_2">
+          <DataField>TersMs_2</DataField>
+        </Field>
+        <Field Name="TersMs_3">
+          <DataField>TersMs_3</DataField>
+        </Field>
+        <Field Name="Extrnal_Document">
+          <DataField>Extrnal_Document</DataField>
+        </Field>
+        <Field Name="SalesPer">
+          <DataField>SalesPer</DataField>
+        </Field>
+        <Field Name="InvoiceUserID">
+          <DataField>InvoiceUserID</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesInvoiceHeade">
+          <DataField>BilltoCustomerNo_SalesInvoiceHeade</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesInvoiceHeade">
+          <DataField>BilltoName_SalesInvoiceHeade</DataField>
+        </Field>
+        <Field Name="BilltoName2_SalesInvoiceHeade">
+          <DataField>BilltoName2_SalesInvoiceHeade</DataField>
+        </Field>
+        <Field Name="BilltoAddress_SalesInvoiceHeader">
+          <DataField>BilltoAddress_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress2_SalesInvoiceHeader">
+          <DataField>BilltoAddress2_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="BilltoCity_SalesInvoiceHeader">
+          <DataField>BilltoCity_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="BilltoPostCode_SalesInvoiceHeader">
+          <DataField>BilltoPostCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerState_SalesInvoiceHeader">
+          <DataField>BilltoCustomerState_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="Name_recCountry_BillTo">
+          <DataField>Name_recCountry_BillTo</DataField>
+        </Field>
+        <Field Name="PhoneNo_recCustomer">
+          <DataField>PhoneNo_recCustomer</DataField>
+        </Field>
+        <Field Name="ShiptoName_SalesInvoiceHeader">
+          <DataField>ShiptoName_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShiptoName2_SalesInvoiceHeader">
+          <DataField>ShiptoName2_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress_SalesInvoiceHeader">
+          <DataField>ShiptoAddress_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress2_SalesInvoiceHeader">
+          <DataField>ShiptoAddress2_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShiptoCity_SalesInvoiceHeader">
+          <DataField>ShiptoCity_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShiptoPostCode_SalesInvoiceHeader">
+          <DataField>ShiptoPostCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="State_SalesInvoiceHeader">
+          <DataField>State_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShiptoGSTReg">
+          <DataField>ShiptoGSTReg</DataField>
+        </Field>
+        <Field Name="Name_recCountry_ShipTo">
+          <DataField>Name_recCountry_ShipTo</DataField>
+        </Field>
+        <Field Name="OrderNo">
+          <DataField>OrderNo</DataField>
+        </Field>
+        <Field Name="InvoiceNo_SalesInvoiceHeader">
+          <DataField>InvoiceNo_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesInvoiceHeader">
+          <DataField>PostingDate_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="VehicleNo_SalesInvoiceHeader">
+          <DataField>VehicleNo_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ShipmentDate_SalesInvoiceHeader">
+          <DataField>ShipmentDate_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="txtPaymentDescription">
+          <DataField>txtPaymentDescription</DataField>
+        </Field>
+        <Field Name="AmtInWord">
+          <DataField>AmtInWord</DataField>
+        </Field>
+        <Field Name="AmounttoCustomer_SalesInvoiceHeader">
+          <DataField>AmounttoCustomer_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="AmounttoCustomer_SalesInvoiceHeaderFormat">
+          <DataField>AmounttoCustomer_SalesInvoiceHeaderFormat</DataField>
+        </Field>
+        <Field Name="QRCode_SalesInvoiceHeader">
+          <DataField>QRCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="FreightGLAmt">
+          <DataField>FreightGLAmt</DataField>
+        </Field>
+        <Field Name="FreightGLAmtFormat">
+          <DataField>FreightGLAmtFormat</DataField>
+        </Field>
+        <Field Name="Remarks_SalesInvoiceHeader">
+          <DataField>Remarks_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="Freight">
+          <DataField>Freight</DataField>
+        </Field>
+        <Field Name="FreightFormat">
+          <DataField>FreightFormat</DataField>
+        </Field>
+        <Field Name="Insurance">
+          <DataField>Insurance</DataField>
+        </Field>
+        <Field Name="InsuranceFormat">
+          <DataField>InsuranceFormat</DataField>
+        </Field>
+        <Field Name="Packing">
+          <DataField>Packing</DataField>
+        </Field>
+        <Field Name="PackingFormat">
+          <DataField>PackingFormat</DataField>
+        </Field>
+        <Field Name="BankDetail1">
+          <DataField>BankDetail1</DataField>
+        </Field>
+        <Field Name="BankDetail2">
+          <DataField>BankDetail2</DataField>
+        </Field>
+        <Field Name="BankDetail3">
+          <DataField>BankDetail3</DataField>
+        </Field>
+        <Field Name="BankDetail4">
+          <DataField>BankDetail4</DataField>
+        </Field>
+        <Field Name="BankDetail5">
+          <DataField>BankDetail5</DataField>
+        </Field>
+        <Field Name="CurrRate">
+          <DataField>CurrRate</DataField>
+        </Field>
+        <Field Name="CurrRateFormat">
+          <DataField>CurrRateFormat</DataField>
+        </Field>
+        <Field Name="Type_SalesInvoiceLine">
+          <DataField>Type_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="No_SalesInvoiceLine">
+          <DataField>No_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Description_SalesInvoiceLine">
+          <DataField>Description_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="HSNSACCode_SalesInvoiceLine">
+          <DataField>HSNSACCode_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="GSTGroupType_SalesInvoiceLine">
+          <DataField>GSTGroupType_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_SalesInvoiceLine">
+          <DataField>UnitofMeasure_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesInvoiceLine">
+          <DataField>Quantity_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesInvoiceLineFormat">
+          <DataField>Quantity_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="UnitPrice_SalesInvoiceLine">
+          <DataField>UnitPrice_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="UnitPrice_SalesInvoiceLineFormat">
+          <DataField>UnitPrice_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="Tax_SalesInvoiceLine">
+          <DataField>Tax_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesInvoiceLine">
+          <DataField>Amount_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesInvoiceLineFormat">
+          <DataField>Amount_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="IGST_Perc">
+          <DataField>IGST_Perc</DataField>
+        </Field>
+        <Field Name="IGST_PercFormat">
+          <DataField>IGST_PercFormat</DataField>
+        </Field>
+        <Field Name="IGST_Amt">
+          <DataField>IGST_Amt</DataField>
+        </Field>
+        <Field Name="IGST_AmtFormat">
+          <DataField>IGST_AmtFormat</DataField>
+        </Field>
+        <Field Name="CGST_Perc">
+          <DataField>CGST_Perc</DataField>
+        </Field>
+        <Field Name="CGST_PercFormat">
+          <DataField>CGST_PercFormat</DataField>
+        </Field>
+        <Field Name="CGST_Amt">
+          <DataField>CGST_Amt</DataField>
+        </Field>
+        <Field Name="CGST_AmtFormat">
+          <DataField>CGST_AmtFormat</DataField>
+        </Field>
+        <Field Name="SGST_Perc">
+          <DataField>SGST_Perc</DataField>
+        </Field>
+        <Field Name="SGST_PercFormat">
+          <DataField>SGST_PercFormat</DataField>
+        </Field>
+        <Field Name="SGST_Amt">
+          <DataField>SGST_Amt</DataField>
+        </Field>
+        <Field Name="SGST_AmtFormat">
+          <DataField>SGST_AmtFormat</DataField>
+        </Field>
+        <Field Name="CESS_Perc">
+          <DataField>CESS_Perc</DataField>
+        </Field>
+        <Field Name="CESS_PercFormat">
+          <DataField>CESS_PercFormat</DataField>
+        </Field>
+        <Field Name="CESS_Amt">
+          <DataField>CESS_Amt</DataField>
+        </Field>
+        <Field Name="CESS_AmtFormat">
+          <DataField>CESS_AmtFormat</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesInvoiceLine">
+          <DataField>LineDiscountAmount_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesInvoiceLineFormat">
+          <DataField>LineDiscountAmount_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="ItemCategoryCode_SalesInvoiceLine">
+          <DataField>ItemCategoryCode_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="TaxAmount_SalesInvoiceLine">
+          <DataField>TaxAmount_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="GSTPlaceofSupply_SalesInvoiceLine">
+          <DataField>GSTPlaceofSupply_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="ChargesAmount">
+          <DataField>ChargesAmount</DataField>
+        </Field>
+        <Field Name="ChargesAmountFormat">
+          <DataField>ChargesAmountFormat</DataField>
+        </Field>
+        <Field Name="ShelfNo">
+          <DataField>ShelfNo</DataField>
+        </Field>
+        <Field Name="Number_Integer1">
+          <DataField>Number_Integer1</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

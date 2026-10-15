@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_SalesHeader">
+          <DataField>No_SalesHeader</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_PostCode">
+          <DataField>CompanyInfo_PostCode</DataField>
+        </Field>
+        <Field Name="CompanyInfo_State">
+          <DataField>CompanyInfo_State</DataField>
+        </Field>
+        <Field Name="CompanyInfo_PhoneNo">
+          <DataField>CompanyInfo_PhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyInfo_faxNo">
+          <DataField>CompanyInfo_faxNo</DataField>
+        </Field>
+        <Field Name="CompanyInfo_STDCode">
+          <DataField>CompanyInfo_STDCode</DataField>
+        </Field>
+        <Field Name="CompanyInfo_EMail">
+          <DataField>CompanyInfo_EMail</DataField>
+        </Field>
+        <Field Name="CompanyInfoHomePage">
+          <DataField>CompanyInfoHomePage</DataField>
+        </Field>
+        <Field Name="CompanyInfo_TIN_No">
+          <DataField>CompanyInfo_TIN_No</DataField>
+        </Field>
+        <Field Name="CompanyInfo_CST_No">
+          <DataField>CompanyInfo_CST_No</DataField>
+        </Field>
+        <Field Name="CompanyRegistrationNo">
+          <DataField>CompanyRegistrationNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoPANNo">
+          <DataField>CompanyInfoPANNo</DataField>
+        </Field>
+        <Field Name="CountyName">
+          <DataField>CountyName</DataField>
+        </Field>
+        <Field Name="LocationName">
+          <DataField>LocationName</DataField>
+        </Field>
+        <Field Name="LocationName2">
+          <DataField>LocationName2</DataField>
+        </Field>
+        <Field Name="LocAddress2">
+          <DataField>LocAddress2</DataField>
+        </Field>
+        <Field Name="LocationAdd">
+          <DataField>LocationAdd</DataField>
+        </Field>
+        <Field Name="LocationCity">
+          <DataField>LocationCity</DataField>
+        </Field>
+        <Field Name="LStateDescription">
+          <DataField>LStateDescription</DataField>
+        </Field>
+        <Field Name="LocCountryName">
+          <DataField>LocCountryName</DataField>
+        </Field>
+        <Field Name="LocGSTNo">
+          <DataField>LocGSTNo</DataField>
+        </Field>
+        <Field Name="CountryName">
+          <DataField>CountryName</DataField>
+        </Field>
+        <Field Name="CStateDescription">
+          <DataField>CStateDescription</DataField>
+        </Field>
+        <Field Name="SrNo">
+          <DataField>SrNo</DataField>
+        </Field>
+        <Field Name="LocTINNo">
+          <DataField>LocTINNo</DataField>
+        </Field>
+        <Field Name="LocCSTNo">
+          <DataField>LocCSTNo</DataField>
+        </Field>
+        <Field Name="LocContactPerson">
+          <DataField>LocContactPerson</DataField>
+        </Field>
+        <Field Name="LocName2">
+          <DataField>LocName2</DataField>
+        </Field>
+        <Field Name="TotalNoOfCarton">
+          <DataField>TotalNoOfCarton</DataField>
+        </Field>
+        <Field Name="TotalNoOfCartonFormat">
+          <DataField>TotalNoOfCartonFormat</DataField>
+        </Field>
+        <Field Name="DimensionCode">
+          <DataField>DimensionCode</DataField>
+        </Field>
+        <Field Name="TaxCode">
+          <DataField>TaxCode</DataField>
+        </Field>
+        <Field Name="GSTAMOUNT">
+          <DataField>GSTAMOUNT</DataField>
+        </Field>
+        <Field Name="GSTAMOUNTFormat">
+          <DataField>GSTAMOUNTFormat</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesHeader">
+          <DataField>BilltoName_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress_SalesHeader">
+          <DataField>BilltoAddress_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress2_SalesHeader">
+          <DataField>BilltoAddress2_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesHeader">
+          <DataField>BilltoCustomerNo_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoCity_SalesHeader">
+          <DataField>BilltoCity_SalesHeader</DataField>
+        </Field>
+        <Field Name="BillToPostCode_">
+          <DataField>BillToPostCode_</DataField>
+        </Field>
+        <Field Name="State_SalesHeader">
+          <DataField>State_SalesHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesHeader">
+          <DataField>PostingDate_SalesHeader</DataField>
+        </Field>
+        <Field Name="CustomerPAN">
+          <DataField>CustomerPAN</DataField>
+        </Field>
+        <Field Name="CustomerGSTNO">
+          <DataField>CustomerGSTNO</DataField>
+        </Field>
+        <Field Name="StateGSt">
+          <DataField>StateGSt</DataField>
+        </Field>
+        <Field Name="Comments_">
+          <DataField>Comments_</DataField>
+        </Field>
+        <Field Name="No_SalesLine">
+          <DataField>No_SalesLine</DataField>
+        </Field>
+        <Field Name="Description_SalesLine">
+          <DataField>Description_SalesLine</DataField>
+        </Field>
+        <Field Name="HSNSACCode_SalesLine">
+          <DataField>HSNSACCode_SalesLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesLine">
+          <DataField>Quantity_SalesLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesLineFormat">
+          <DataField>Quantity_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesLine">
+          <DataField>LineAmount_SalesLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesLineFormat">
+          <DataField>LineAmount_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="IGSTAmt">
+          <DataField>IGSTAmt</DataField>
+        </Field>
+        <Field Name="IGSTAmtFormat">
+          <DataField>IGSTAmtFormat</DataField>
+        </Field>
+        <Field Name="IGSTRate">
+          <DataField>IGSTRate</DataField>
+        </Field>
+        <Field Name="IGSTRateFormat">
+          <DataField>IGSTRateFormat</DataField>
+        </Field>
+        <Field Name="CGSTAmt">
+          <DataField>CGSTAmt</DataField>
+        </Field>
+        <Field Name="CGSTAmtFormat">
+          <DataField>CGSTAmtFormat</DataField>
+        </Field>
+        <Field Name="CGSTRate">
+          <DataField>CGSTRate</DataField>
+        </Field>
+        <Field Name="CGSTRateFormat">
+          <DataField>CGSTRateFormat</DataField>
+        </Field>
+        <Field Name="SGSTAmt">
+          <DataField>SGSTAmt</DataField>
+        </Field>
+        <Field Name="SGSTAmtFormat">
+          <DataField>SGSTAmtFormat</DataField>
+        </Field>
+        <Field Name="SGSTRate">
+          <DataField>SGSTRate</DataField>
+        </Field>
+        <Field Name="SGSTRateFormat">
+          <DataField>SGSTRateFormat</DataField>
+        </Field>
+        <Field Name="UTGSTAmt">
+          <DataField>UTGSTAmt</DataField>
+        </Field>
+        <Field Name="UTGSTAmtFormat">
+          <DataField>UTGSTAmtFormat</DataField>
+        </Field>
+        <Field Name="UTGSTRate">
+          <DataField>UTGSTRate</DataField>
+        </Field>
+        <Field Name="UTGSTRateFormat">
+          <DataField>UTGSTRateFormat</DataField>
+        </Field>
+        <Field Name="TotalAmtGST">
+          <DataField>TotalAmtGST</DataField>
+        </Field>
+        <Field Name="TotalAmtGSTFormat">
+          <DataField>TotalAmtGSTFormat</DataField>
+        </Field>
+        <Field Name="TotalRateGST">
+          <DataField>TotalRateGST</DataField>
+        </Field>
+        <Field Name="TotalRateGSTFormat">
+          <DataField>TotalRateGSTFormat</DataField>
+        </Field>
+        <Field Name="Number_Integer">
+          <DataField>Number_Integer</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

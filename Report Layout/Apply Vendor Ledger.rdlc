@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="DocumentNo_BankAccountLedgerEntry">
+          <DataField>DocumentNo_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_BankAccountLedgerEntry">
+          <DataField>PostingDate_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="AmountLCY_BankAccountLedgerEntry">
+          <DataField>AmountLCY_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="AmountLCY_BankAccountLedgerEntryFormat">
+          <DataField>AmountLCY_BankAccountLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="ChequeNo_BankAccountLedgerEntry">
+          <DataField>ChequeNo_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="ComPicture">
+          <DataField>ComPicture</DataField>
+        </Field>
+        <Field Name="CopName">
+          <DataField>CopName</DataField>
+        </Field>
+        <Field Name="ComAddress">
+          <DataField>ComAddress</DataField>
+        </Field>
+        <Field Name="ComAddress2">
+          <DataField>ComAddress2</DataField>
+        </Field>
+        <Field Name="ComCity">
+          <DataField>ComCity</DataField>
+        </Field>
+        <Field Name="COMPOstCode">
+          <DataField>COMPOstCode</DataField>
+        </Field>
+        <Field Name="ComCountry">
+          <DataField>ComCountry</DataField>
+        </Field>
+        <Field Name="ComPhoneNo">
+          <DataField>ComPhoneNo</DataField>
+        </Field>
+        <Field Name="EntryNo_VendorLedgerEntry">
+          <DataField>EntryNo_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_VendorLedgerEntry">
+          <DataField>DocumentNo_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="OriginalAmtLCY_VendorLedgerEntry">
+          <DataField>OriginalAmtLCY_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="OriginalAmtLCY_VendorLedgerEntryFormat">
+          <DataField>OriginalAmtLCY_VendorLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="PostingDate_VendorLedgerEntry">
+          <DataField>PostingDate_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="Doc_Type_Vendor">
+          <DataField>Doc_Type_Vendor</DataField>
+        </Field>
+        <Field Name="Invoice_No">
+          <DataField>Invoice_No</DataField>
+        </Field>
+        <Field Name="RemainingAmtLCY_VendorLedgerEntry">
+          <DataField>RemainingAmtLCY_VendorLedgerEntry</DataField>
+        </Field>
+        <Field Name="RemainingAmtLCY_VendorLedgerEntryFormat">
+          <DataField>RemainingAmtLCY_VendorLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="Invoice_No1">
+          <DataField>Invoice_No1</DataField>
+        </Field>
+        <Field Name="Vendor_No">
+          <DataField>Vendor_No</DataField>
+        </Field>
+        <Field Name="TDSAMOUNT">
+          <DataField>TDSAMOUNT</DataField>
+        </Field>
+        <Field Name="TDSAMOUNTFormat">
+          <DataField>TDSAMOUNTFormat</DataField>
+        </Field>
+        <Field Name="EntryNo_DetailedVendorLedgEntry1">
+          <DataField>EntryNo_DetailedVendorLedgEntry1</DataField>
+        </Field>
+        <Field Name="Amount_DetailedVendorLedgEntry1">
+          <DataField>Amount_DetailedVendorLedgEntry1</DataField>
+        </Field>
+        <Field Name="Amount_DetailedVendorLedgEntry1Format">
+          <DataField>Amount_DetailedVendorLedgEntry1Format</DataField>
+        </Field>
+        <Field Name="DocumentNo_DetailedVendorLedgEntry1">
+          <DataField>DocumentNo_DetailedVendorLedgEntry1</DataField>
+        </Field>
+        <Field Name="VendorLedgerEntryNo_DetailedVendorLedgEntry1">
+          <DataField>VendorLedgerEntryNo_DetailedVendorLedgEntry1</DataField>
+        </Field>
+        <Field Name="Posting_Date1">
+          <DataField>Posting_Date1</DataField>
+        </Field>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="DocNo1">
+          <DataField>DocNo1</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="VendorLedgerEntryNo_DetailedVendorLedgEntry2">
+          <DataField>VendorLedgerEntryNo_DetailedVendorLedgEntry2</DataField>
+        </Field>
+        <Field Name="AmountLCY_DetailedVendorLedgEntry2">
+          <DataField>AmountLCY_DetailedVendorLedgEntry2</DataField>
+        </Field>
+        <Field Name="AmountLCY_DetailedVendorLedgEntry2Format">
+          <DataField>AmountLCY_DetailedVendorLedgEntry2Format</DataField>
+        </Field>
+        <Field Name="EntryNo_DetailedVendorLedgEntry2">
+          <DataField>EntryNo_DetailedVendorLedgEntry2</DataField>
+        </Field>
+        <Field Name="DocumentNo_DetailedVendorLedgEntry2">
+          <DataField>DocumentNo_DetailedVendorLedgEntry2</DataField>
+        </Field>
+        <Field Name="Posting_Date2">
+          <DataField>Posting_Date2</DataField>
+        </Field>
+        <Field Name="Doc_Type">
+          <DataField>Doc_Type</DataField>
+        </Field>
+        <Field Name="AmountLCY">
+          <DataField>AmountLCY</DataField>
+        </Field>
+        <Field Name="RecDocument">
+          <DataField>RecDocument</DataField>
+        </Field>
+        <Field Name="DocNo2">
+          <DataField>DocNo2</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

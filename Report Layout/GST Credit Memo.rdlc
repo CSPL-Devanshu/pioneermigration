@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="SalesCrMemoHeader_No_">
+          <DataField>SalesCrMemoHeader_No_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_State">
+          <DataField>CompanyInfo_State</DataField>
+        </Field>
+        <Field Name="CompanyInfo_PostCode">
+          <DataField>CompanyInfo_PostCode</DataField>
+        </Field>
+        <Field Name="CompanyInfo_TelexNo">
+          <DataField>CompanyInfo_TelexNo</DataField>
+        </Field>
+        <Field Name="CompanyInfo_FaxNo">
+          <DataField>CompanyInfo_FaxNo</DataField>
+        </Field>
+        <Field Name="CompanyInfo_EMail">
+          <DataField>CompanyInfo_EMail</DataField>
+        </Field>
+        <Field Name="CompanyInfopanno_">
+          <DataField>CompanyInfopanno_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_tin">
+          <DataField>CompanyInfo_tin</DataField>
+        </Field>
+        <Field Name="CompanyInfo_STDCode">
+          <DataField>CompanyInfo_STDCode</DataField>
+        </Field>
+        <Field Name="CompGSTIN">
+          <DataField>CompGSTIN</DataField>
+        </Field>
+        <Field Name="CompanyCountryName">
+          <DataField>CompanyCountryName</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesCrMemoHeader">
+          <DataField>BilltoName_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress_SalesCrMemoHeader">
+          <DataField>BilltoAddress_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress2_SalesCrMemoHeader">
+          <DataField>BilltoAddress2_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoCity_SalesCrMemoHeader">
+          <DataField>BilltoCity_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="IRNHash_SalesCrMemoHeader">
+          <DataField>IRNHash_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="QRCode_SalesCrMemoHeader">
+          <DataField>QRCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="State_SalesCrMemoHeader">
+          <DataField>State_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="StateNo_">
+          <DataField>StateNo_</DataField>
+        </Field>
+        <Field Name="CompanyInfocst">
+          <DataField>CompanyInfocst</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesCrMemoHeader">
+          <DataField>PostingDate_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="ShipmentMethodCode_SalesCrMemoHeader">
+          <DataField>ShipmentMethodCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_SalesCrMemoHeader">
+          <DataField>ExternalDocumentNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="selesman">
+          <DataField>selesman</DataField>
+        </Field>
+        <Field Name="CompanyInfo_RegistrationNo">
+          <DataField>CompanyInfo_RegistrationNo</DataField>
+        </Field>
+        <Field Name="CompanyInfo_HomePage">
+          <DataField>CompanyInfo_HomePage</DataField>
+        </Field>
+        <Field Name="SelltoCustomerNo_SalesCrMemoHeader">
+          <DataField>SelltoCustomerNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoPostCode_SalesCrMemoHeader">
+          <DataField>BilltoPostCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoCountryRegionCode_SalesCrMemoHeader">
+          <DataField>BilltoCountryRegionCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerState_SalesCrMemoHeader">
+          <DataField>BilltoCustomerState_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesCrMemoHeader">
+          <DataField>BilltoCustomerNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SelltoCustomerName_SalesCrMemoHeader">
+          <DataField>SelltoCustomerName_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SelltoAddress_SalesCrMemoHeader">
+          <DataField>SelltoAddress_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SelltoAddress2_SalesCrMemoHeader">
+          <DataField>SelltoAddress2_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SelltoCity_SalesCrMemoHeader">
+          <DataField>SelltoCity_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SelltoPostCode_SalesCrMemoHeader">
+          <DataField>SelltoPostCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SelltoCountryRegionCode_SalesCrMemoHeader">
+          <DataField>SelltoCountryRegionCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="PaymentTermsCode_SalesCrMemoHeader">
+          <DataField>PaymentTermsCode_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="Lcycode">
+          <DataField>Lcycode</DataField>
+        </Field>
+        <Field Name="Recuntry_Code">
+          <DataField>Recuntry_Code</DataField>
+        </Field>
+        <Field Name="Code1">
+          <DataField>Code1</DataField>
+        </Field>
+        <Field Name="LocCST_">
+          <DataField>LocCST_</DataField>
+        </Field>
+        <Field Name="LocTIN_">
+          <DataField>LocTIN_</DataField>
+        </Field>
+        <Field Name="PayDescription">
+          <DataField>PayDescription</DataField>
+        </Field>
+        <Field Name="OrderNo_SalesCrMemoHeader">
+          <DataField>OrderNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="LocState">
+          <DataField>LocState</DataField>
+        </Field>
+        <Field Name="Amount_SalesCrMemoHeader">
+          <DataField>Amount_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="Amount_SalesCrMemoHeaderFormat">
+          <DataField>Amount_SalesCrMemoHeaderFormat</DataField>
+        </Field>
+        <Field Name="CommentDes">
+          <DataField>CommentDes</DataField>
+        </Field>
+        <Field Name="InvoiceType_SalesCrMemoHeader">
+          <DataField>InvoiceType_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BarCodeText_">
+          <DataField>BarCodeText_</DataField>
+        </Field>
+        <Field Name="NetWeight_SalesCrMemoLine">
+          <DataField>NetWeight_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="NetWeight_SalesCrMemoLineFormat">
+          <DataField>NetWeight_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="BilltoContactNo_SalesCrMemoHeader">
+          <DataField>BilltoContactNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoContact_SalesCrMemoHeader">
+          <DataField>BilltoContact_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="CopyText">
+          <DataField>CopyText</DataField>
+        </Field>
+        <Field Name="SalesCrMemoHeader___Sell_to_Customer_Name_">
+          <DataField>SalesCrMemoHeader___Sell_to_Customer_Name_</DataField>
+        </Field>
+        <Field Name="SalesCrMemoHeader___Document_Date_">
+          <DataField>SalesCrMemoHeader___Document_Date_</DataField>
+        </Field>
+        <Field Name="SalesCrMemoHeader___No__">
+          <DataField>SalesCrMemoHeader___No__</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Name2_">
+          <DataField>Name2_</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="LocAddress2">
+          <DataField>LocAddress2</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="LocTINNo">
+          <DataField>LocTINNo</DataField>
+        </Field>
+        <Field Name="LocGstno">
+          <DataField>LocGstno</DataField>
+        </Field>
+        <Field Name="custGstno">
+          <DataField>custGstno</DataField>
+        </Field>
+        <Field Name="SalesCrMemoHeader___Sell_to_Address_">
+          <DataField>SalesCrMemoHeader___Sell_to_Address_</DataField>
+        </Field>
+        <Field Name="Customer_TIN">
+          <DataField>Customer_TIN</DataField>
+        </Field>
+        <Field Name="Customer_PANNo">
+          <DataField>Customer_PANNo</DataField>
+        </Field>
+        <Field Name="Customer_CSTNo">
+          <DataField>Customer_CSTNo</DataField>
+        </Field>
+        <Field Name="DateOfDelivery">
+          <DataField>DateOfDelivery</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="PageNo">
+          <DataField>PageNo</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Integer_Number">
+          <DataField>Integer_Number</DataField>
+        </Field>
+        <Field Name="Date_of_delivery_of_goodsCaption">
+          <DataField>Date_of_delivery_of_goodsCaption</DataField>
+        </Field>
+        <Field Name="PageNoCaption">
+          <DataField>PageNoCaption</DataField>
+        </Field>
+        <Field Name="OutPutNo_">
+          <DataField>OutPutNo_</DataField>
+        </Field>
+        <Field Name="CountryName">
+          <DataField>CountryName</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="CustAddress">
+          <DataField>CustAddress</DataField>
+        </Field>
+        <Field Name="CustAddress2">
+          <DataField>CustAddress2</DataField>
+        </Field>
+        <Field Name="CustState">
+          <DataField>CustState</DataField>
+        </Field>
+        <Field Name="CustCity">
+          <DataField>CustCity</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine_Quantity">
+          <DataField>SalesCrMemoLine_Quantity</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine_QuantityFormat">
+          <DataField>SalesCrMemoLine_QuantityFormat</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine_Description">
+          <DataField>SalesCrMemoLine_Description</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine__Unit_Price_">
+          <DataField>SalesCrMemoLine__Unit_Price_</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine__Unit_Price_Format">
+          <DataField>SalesCrMemoLine__Unit_Price_Format</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine__Tax___">
+          <DataField>SalesCrMemoLine__Tax___</DataField>
+        </Field>
+        <Field Name="SalesCrMemoLine__Tax_Amount_">
+          <DataField>SalesCrMemoLine__Tax_Amount_</DataField>
+        </Field>
+        <Field Name="ServiceTaxRegistrationNo_SalesCrMemoLine">
+          <DataField>ServiceTaxRegistrationNo_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineDiscount_SalesCrMemoLine">
+          <DataField>LineDiscount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineDiscount_SalesCrMemoLineFormat">
+          <DataField>LineDiscount_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="NumberText">
+          <DataField>NumberText</DataField>
+        </Field>
+        <Field Name="GrossWeight_SalesCrMemoLine">
+          <DataField>GrossWeight_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="GrossWeight_SalesCrMemoLineFormat">
+          <DataField>GrossWeight_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="Description2_SalesCrMemoLine">
+          <DataField>Description2_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="No_SalesCrMemoLine">
+          <DataField>No_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_SalesCrMemoLine">
+          <DataField>UnitofMeasure_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LocationCode_SalesCrMemoLine">
+          <DataField>LocationCode_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesCrMemoLine">
+          <DataField>LineAmount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesCrMemoLineFormat">
+          <DataField>LineAmount_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="TaxAreaCode_SalesCrMemoLine">
+          <DataField>TaxAreaCode_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="taxtype">
+          <DataField>taxtype</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesCrMemoLine">
+          <DataField>LineDiscountAmount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesCrMemoLineFormat">
+          <DataField>LineDiscountAmount_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="TNoOfCtns_">
+          <DataField>TNoOfCtns_</DataField>
+        </Field>
+        <Field Name="TNoOfCtns_Format">
+          <DataField>TNoOfCtns_Format</DataField>
+        </Field>
+        <Field Name="TotalLineAmount">
+          <DataField>TotalLineAmount</DataField>
+        </Field>
+        <Field Name="TotalLineAmountFormat">
+          <DataField>TotalLineAmountFormat</DataField>
+        </Field>
+        <Field Name="LineDescription">
+          <DataField>LineDescription</DataField>
+        </Field>
+        <Field Name="ReferenceDescription">
+          <DataField>ReferenceDescription</DataField>
+        </Field>
+        <Field Name="CrossReferenceNo_SalesCrMemoLine">
+          <DataField>CrossReferenceNo_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="TotalCubage">
+          <DataField>TotalCubage</DataField>
+        </Field>
+        <Field Name="TotalCubageFormat">
+          <DataField>TotalCubageFormat</DataField>
+        </Field>
+        <Field Name="HSNSACCode_SalesCrMemoLine">
+          <DataField>HSNSACCode_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesCrMemoLine">
+          <DataField>Amount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesCrMemoLineFormat">
+          <DataField>Amount_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="IGSTAmt_">
+          <DataField>IGSTAmt_</DataField>
+        </Field>
+        <Field Name="IGSTAmt_Format">
+          <DataField>IGSTAmt_Format</DataField>
+        </Field>
+        <Field Name="IGSTRate_">
+          <DataField>IGSTRate_</DataField>
+        </Field>
+        <Field Name="IGSTRate_Format">
+          <DataField>IGSTRate_Format</DataField>
+        </Field>
+        <Field Name="SGSTAmt_">
+          <DataField>SGSTAmt_</DataField>
+        </Field>
+        <Field Name="SGSTAmt_Format">
+          <DataField>SGSTAmt_Format</DataField>
+        </Field>
+        <Field Name="SGSTRate_">
+          <DataField>SGSTRate_</DataField>
+        </Field>
+        <Field Name="SGSTRate_Format">
+          <DataField>SGSTRate_Format</DataField>
+        </Field>
+        <Field Name="CGSTAmt_">
+          <DataField>CGSTAmt_</DataField>
+        </Field>
+        <Field Name="CGSTAmt_Format">
+          <DataField>CGSTAmt_Format</DataField>
+        </Field>
+        <Field Name="CGSTRate_">
+          <DataField>CGSTRate_</DataField>
+        </Field>
+        <Field Name="CGSTRate_Format">
+          <DataField>CGSTRate_Format</DataField>
+        </Field>
+        <Field Name="UTGSTRate_">
+          <DataField>UTGSTRate_</DataField>
+        </Field>
+        <Field Name="UTGSTRate_Format">
+          <DataField>UTGSTRate_Format</DataField>
+        </Field>
+        <Field Name="UTGSTAmt_">
+          <DataField>UTGSTAmt_</DataField>
+        </Field>
+        <Field Name="UTGSTAmt_Format">
+          <DataField>UTGSTAmt_Format</DataField>
+        </Field>
+        <Field Name="DimensionCode">
+          <DataField>DimensionCode</DataField>
+        </Field>
+        <Field Name="DesToPrint">
+          <DataField>DesToPrint</DataField>
+        </Field>
+        <Field Name="ItemDes">
+          <DataField>ItemDes</DataField>
+        </Field>
+        <Field Name="AppliestoDocNo_SalesCrMemoHeader">
+          <DataField>AppliestoDocNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="TotalAmtGST">
+          <DataField>TotalAmtGST</DataField>
+        </Field>
+        <Field Name="TotalAmtGSTFormat">
+          <DataField>TotalAmtGSTFormat</DataField>
+        </Field>
+        <Field Name="TotalRateGST">
+          <DataField>TotalRateGST</DataField>
+        </Field>
+        <Field Name="TotalRateGSTFormat">
+          <DataField>TotalRateGSTFormat</DataField>
+        </Field>
+        <Field Name="Number_Integer1">
+          <DataField>Number_Integer1</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

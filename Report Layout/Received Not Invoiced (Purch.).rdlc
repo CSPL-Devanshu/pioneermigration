@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="lblDocumentNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDocumentNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDocumentNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblVendorNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVendorNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVendorNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblVendorName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblVendorName</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblVendorName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblLocationCode">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblLocationCode</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblLocationCode</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblPostingDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblPostingDate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblPostingDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblOrderNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblOrderNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblOrderNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblType">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblType</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblType</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblItemNo">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblItemNo</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblItemNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblDescription">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblDescription</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblDescription</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblPostingGroup">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblPostingGroup</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblPostingGroup</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblUOM">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblUOM</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblUOM</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblQuantity">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblQuantity</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblQuantity</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblQuantityInvoiced">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblQuantityInvoiced</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblQuantityInvoiced</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lblQtyRcdNotInvoiced">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>lblQtyRcdNotInvoiced</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>lblQtyRcdNotInvoiced</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_PurchRcptHeader">
+          <DataField>No_PurchRcptHeader</DataField>
+        </Field>
+        <Field Name="BuyfromVendorNo_PurchRcptHeader">
+          <DataField>BuyfromVendorNo_PurchRcptHeader</DataField>
+        </Field>
+        <Field Name="BuyfromVendorName_PurchRcptHeader">
+          <DataField>BuyfromVendorName_PurchRcptHeader</DataField>
+        </Field>
+        <Field Name="LocationCode_PurchRcptHeader">
+          <DataField>LocationCode_PurchRcptHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_PurchRcptHeader">
+          <DataField>PostingDate_PurchRcptHeader</DataField>
+        </Field>
+        <Field Name="OrderNo_PurchRcptHeader">
+          <DataField>OrderNo_PurchRcptHeader</DataField>
+        </Field>
+        <Field Name="Type_PurchRcptLine">
+          <DataField>Type_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="No_PurchRcptLine">
+          <DataField>No_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="LocationCode_PurchRcptLine">
+          <DataField>LocationCode_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="PostingGroup_PurchRcptLine">
+          <DataField>PostingGroup_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="Description_PurchRcptLine">
+          <DataField>Description_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="Description2_PurchRcptLine">
+          <DataField>Description2_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_PurchRcptLine">
+          <DataField>UnitofMeasure_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchRcptLine">
+          <DataField>Quantity_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchRcptLineFormat">
+          <DataField>Quantity_PurchRcptLineFormat</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_PurchRcptLine">
+          <DataField>DirectUnitCost_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_PurchRcptLineFormat">
+          <DataField>DirectUnitCost_PurchRcptLineFormat</DataField>
+        </Field>
+        <Field Name="QtyRcdNotInvoiced_PurchRcptLine">
+          <DataField>QtyRcdNotInvoiced_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="QtyRcdNotInvoiced_PurchRcptLineFormat">
+          <DataField>QtyRcdNotInvoiced_PurchRcptLineFormat</DataField>
+        </Field>
+        <Field Name="QuantityInvoiced_PurchRcptLine">
+          <DataField>QuantityInvoiced_PurchRcptLine</DataField>
+        </Field>
+        <Field Name="QuantityInvoiced_PurchRcptLineFormat">
+          <DataField>QuantityInvoiced_PurchRcptLineFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="Ref_____CurrReport_OBJECTID_FALSE_">
+          <DataField>Ref_____CurrReport_OBJECTID_FALSE_</DataField>
+        </Field>
+        <Field Name="Date_____FORMAT_TODAY_0_4_">
+          <DataField>Date_____FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="Page_____FORMAT_CurrReport_PAGENO_">
+          <DataField>Page_____FORMAT_CurrReport_PAGENO_</DataField>
+        </Field>
+        <Field Name="User_____USERID">
+          <DataField>User_____USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City_______CompanyInfo__Post_Code_">
+          <DataField>CompanyInfo_City_______CompanyInfo__Post_Code_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="EmptyString">
+          <DataField>EmptyString</DataField>
+        </Field>
+        <Field Name="EmptyString_Control1000000015">
+          <DataField>EmptyString_Control1000000015</DataField>
+        </Field>
+        <Field Name="Item_Item__No__">
+          <DataField>Item_Item__No__</DataField>
+        </Field>
+        <Field Name="OpenQty">
+          <DataField>OpenQty</DataField>
+        </Field>
+        <Field Name="OpenQtyFormat">
+          <DataField>OpenQtyFormat</DataField>
+        </Field>
+        <Field Name="Purchase">
+          <DataField>Purchase</DataField>
+        </Field>
+        <Field Name="PurchaseFormat">
+          <DataField>PurchaseFormat</DataField>
+        </Field>
+        <Field Name="Sale">
+          <DataField>Sale</DataField>
+        </Field>
+        <Field Name="SaleFormat">
+          <DataField>SaleFormat</DataField>
+        </Field>
+        <Field Name="BalQty">
+          <DataField>BalQty</DataField>
+        </Field>
+        <Field Name="BalQtyFormat">
+          <DataField>BalQtyFormat</DataField>
+        </Field>
+        <Field Name="Item__Item_Category_Code_">
+          <DataField>Item__Item_Category_Code_</DataField>
+        </Field>
+        <Field Name="Item_Item_Description">
+          <DataField>Item_Item_Description</DataField>
+        </Field>
+        <Field Name="EmptyString_Control1000000016">
+          <DataField>EmptyString_Control1000000016</DataField>
+        </Field>
+        <Field Name="EmptyString_Control1000000017">
+          <DataField>EmptyString_Control1000000017</DataField>
+        </Field>
+        <Field Name="OpenQty_Control1000000022">
+          <DataField>OpenQty_Control1000000022</DataField>
+        </Field>
+        <Field Name="OpenQty_Control1000000022Format">
+          <DataField>OpenQty_Control1000000022Format</DataField>
+        </Field>
+        <Field Name="Purchase_Control1000000023">
+          <DataField>Purchase_Control1000000023</DataField>
+        </Field>
+        <Field Name="Purchase_Control1000000023Format">
+          <DataField>Purchase_Control1000000023Format</DataField>
+        </Field>
+        <Field Name="Sale_Control1000000025">
+          <DataField>Sale_Control1000000025</DataField>
+        </Field>
+        <Field Name="Sale_Control1000000025Format">
+          <DataField>Sale_Control1000000025Format</DataField>
+        </Field>
+        <Field Name="BalQty_Control1000000026">
+          <DataField>BalQty_Control1000000026</DataField>
+        </Field>
+        <Field Name="BalQty_Control1000000026Format">
+          <DataField>BalQty_Control1000000026Format</DataField>
+        </Field>
+        <Field Name="Stock_Card__Movement_Report_Caption">
+          <DataField>Stock_Card__Movement_Report_Caption</DataField>
+        </Field>
+        <Field Name="ClosingCaption">
+          <DataField>ClosingCaption</DataField>
+        </Field>
+        <Field Name="IssueCaption">
+          <DataField>IssueCaption</DataField>
+        </Field>
+        <Field Name="ReceiptCaption">
+          <DataField>ReceiptCaption</DataField>
+        </Field>
+        <Field Name="ItemCaption">
+          <DataField>ItemCaption</DataField>
+        </Field>
+        <Field Name="OpeningCaption">
+          <DataField>OpeningCaption</DataField>
+        </Field>
+        <Field Name="Item_CategoryCaption">
+          <DataField>Item_CategoryCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="QuantityCaption">
+          <DataField>QuantityCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

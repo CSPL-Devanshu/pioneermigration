@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="InvtQty2">
+          <DataField>InvtQty2</DataField>
+        </Field>
+        <Field Name="InvtQty2Format">
+          <DataField>InvtQty2Format</DataField>
+        </Field>
+        <Field Name="InvtVal2">
+          <DataField>InvtVal2</DataField>
+        </Field>
+        <Field Name="InvtVal2Format">
+          <DataField>InvtVal2Format</DataField>
+        </Field>
+        <Field Name="InvtQty3">
+          <DataField>InvtQty3</DataField>
+        </Field>
+        <Field Name="InvtQty3Format">
+          <DataField>InvtQty3Format</DataField>
+        </Field>
+        <Field Name="InvtVal3">
+          <DataField>InvtVal3</DataField>
+        </Field>
+        <Field Name="InvtVal3Format">
+          <DataField>InvtVal3Format</DataField>
+        </Field>
+        <Field Name="InvtQty4">
+          <DataField>InvtQty4</DataField>
+        </Field>
+        <Field Name="InvtQty4Format">
+          <DataField>InvtQty4Format</DataField>
+        </Field>
+        <Field Name="InvtVal4">
+          <DataField>InvtVal4</DataField>
+        </Field>
+        <Field Name="InvtVal4Format">
+          <DataField>InvtVal4Format</DataField>
+        </Field>
+        <Field Name="InvtQty5">
+          <DataField>InvtQty5</DataField>
+        </Field>
+        <Field Name="InvtQty5Format">
+          <DataField>InvtQty5Format</DataField>
+        </Field>
+        <Field Name="InvtVal5">
+          <DataField>InvtVal5</DataField>
+        </Field>
+        <Field Name="InvtVal5Format">
+          <DataField>InvtVal5Format</DataField>
+        </Field>
+        <Field Name="InvtQty6">
+          <DataField>InvtQty6</DataField>
+        </Field>
+        <Field Name="InvtQty6Format">
+          <DataField>InvtQty6Format</DataField>
+        </Field>
+        <Field Name="InvtVal6">
+          <DataField>InvtVal6</DataField>
+        </Field>
+        <Field Name="InvtVal6Format">
+          <DataField>InvtVal6Format</DataField>
+        </Field>
+        <Field Name="InvtQty7">
+          <DataField>InvtQty7</DataField>
+        </Field>
+        <Field Name="InvtQty7Format">
+          <DataField>InvtQty7Format</DataField>
+        </Field>
+        <Field Name="InvtVal7">
+          <DataField>InvtVal7</DataField>
+        </Field>
+        <Field Name="InvtVal7Format">
+          <DataField>InvtVal7Format</DataField>
+        </Field>
+        <Field Name="InvtQty8">
+          <DataField>InvtQty8</DataField>
+        </Field>
+        <Field Name="InvtQty8Format">
+          <DataField>InvtQty8Format</DataField>
+        </Field>
+        <Field Name="InvtVal8">
+          <DataField>InvtVal8</DataField>
+        </Field>
+        <Field Name="InvtVal8Format">
+          <DataField>InvtVal8Format</DataField>
+        </Field>
+        <Field Name="No_Item">
+          <DataField>No_Item</DataField>
+        </Field>
+        <Field Name="Description_Item">
+          <DataField>Description_Item</DataField>
+        </Field>
+        <Field Name="InventoryPostingGroup_Item">
+          <DataField>InventoryPostingGroup_Item</DataField>
+        </Field>
+        <Field Name="ItemCategoryCode_Item">
+          <DataField>ItemCategoryCode_Item</DataField>
+        </Field>
+        <Field Name="CompRecName">
+          <DataField>CompRecName</DataField>
+        </Field>
+        <Field Name="CompRecAddress">
+          <DataField>CompRecAddress</DataField>
+        </Field>
+        <Field Name="CompRecAddress2">
+          <DataField>CompRecAddress2</DataField>
+        </Field>
+        <Field Name="CompRecCity">
+          <DataField>CompRecCity</DataField>
+        </Field>
+        <Field Name="CompRecPostCode">
+          <DataField>CompRecPostCode</DataField>
+        </Field>
+        <Field Name="TotalQty">
+          <DataField>TotalQty</DataField>
+        </Field>
+        <Field Name="TotalQtyFormat">
+          <DataField>TotalQtyFormat</DataField>
+        </Field>
+        <Field Name="TotalVal">
+          <DataField>TotalVal</DataField>
+        </Field>
+        <Field Name="TotalValFormat">
+          <DataField>TotalValFormat</DataField>
+        </Field>
+        <Field Name="ItemFilter">
+          <DataField>ItemFilter</DataField>
+        </Field>
+        <Field Name="PeriodStartDate">
+          <DataField>PeriodStartDate</DataField>
+        </Field>
+        <Field Name="InventoryPostingGroupVisible">
+          <DataField>InventoryPostingGroupVisible</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

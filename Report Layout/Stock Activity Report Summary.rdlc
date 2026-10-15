@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ProdGroup">
+          <DataField>ProdGroup</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="StartingDate">
+          <DataField>StartingDate</DataField>
+        </Field>
+        <Field Name="EndingDate">
+          <DataField>EndingDate</DataField>
+        </Field>
+        <Field Name="Currencytxt">
+          <DataField>Currencytxt</DataField>
+        </Field>
+        <Field Name="ExRateType">
+          <DataField>ExRateType</DataField>
+        </Field>
+        <Field Name="Locationtxt">
+          <DataField>Locationtxt</DataField>
+        </Field>
+        <Field Name="ItemCattxt">
+          <DataField>ItemCattxt</DataField>
+        </Field>
+        <Field Name="ProdGrouptxt">
+          <DataField>ProdGrouptxt</DataField>
+        </Field>
+        <Field Name="CostOption">
+          <DataField>CostOption</DataField>
+        </Field>
+        <Field Name="UserID">
+          <DataField>UserID</DataField>
+        </Field>
+        <Field Name="SystemDate">
+          <DataField>SystemDate</DataField>
+        </Field>
+        <Field Name="HaveTRX">
+          <DataField>HaveTRX</DataField>
+        </Field>
+        <Field Name="GroupItemNo">
+          <DataField>GroupItemNo</DataField>
+        </Field>
+        <Field Name="ItemCurrQty">
+          <DataField>ItemCurrQty</DataField>
+        </Field>
+        <Field Name="ItemCurrQtyFormat">
+          <DataField>ItemCurrQtyFormat</DataField>
+        </Field>
+        <Field Name="QtyAfterEndingDate">
+          <DataField>QtyAfterEndingDate</DataField>
+        </Field>
+        <Field Name="QtyAfterEndingDateFormat">
+          <DataField>QtyAfterEndingDateFormat</DataField>
+        </Field>
+        <Field Name="ItemEndQty">
+          <DataField>ItemEndQty</DataField>
+        </Field>
+        <Field Name="ItemEndQtyFormat">
+          <DataField>ItemEndQtyFormat</DataField>
+        </Field>
+        <Field Name="ItemCurrValue">
+          <DataField>ItemCurrValue</DataField>
+        </Field>
+        <Field Name="ItemCurrValueFormat">
+          <DataField>ItemCurrValueFormat</DataField>
+        </Field>
+        <Field Name="ValueAfterEndingDate">
+          <DataField>ValueAfterEndingDate</DataField>
+        </Field>
+        <Field Name="ValueAfterEndingDateFormat">
+          <DataField>ValueAfterEndingDateFormat</DataField>
+        </Field>
+        <Field Name="ItemEndVal">
+          <DataField>ItemEndVal</DataField>
+        </Field>
+        <Field Name="ItemEndValFormat">
+          <DataField>ItemEndValFormat</DataField>
+        </Field>
+        <Field Name="ExRate">
+          <DataField>ExRate</DataField>
+        </Field>
+        <Field Name="ExRateFormat">
+          <DataField>ExRateFormat</DataField>
+        </Field>
+        <Field Name="ItemEndM3">
+          <DataField>ItemEndM3</DataField>
+        </Field>
+        <Field Name="ItemEndM3Format">
+          <DataField>ItemEndM3Format</DataField>
+        </Field>
+        <Field Name="PurchQty">
+          <DataField>PurchQty</DataField>
+        </Field>
+        <Field Name="PurchQtyFormat">
+          <DataField>PurchQtyFormat</DataField>
+        </Field>
+        <Field Name="PurchVal">
+          <DataField>PurchVal</DataField>
+        </Field>
+        <Field Name="PurchValFormat">
+          <DataField>PurchValFormat</DataField>
+        </Field>
+        <Field Name="ItemPurchM3">
+          <DataField>ItemPurchM3</DataField>
+        </Field>
+        <Field Name="ItemPurchM3Format">
+          <DataField>ItemPurchM3Format</DataField>
+        </Field>
+        <Field Name="SaleQty">
+          <DataField>SaleQty</DataField>
+        </Field>
+        <Field Name="SaleQtyFormat">
+          <DataField>SaleQtyFormat</DataField>
+        </Field>
+        <Field Name="SaleVal">
+          <DataField>SaleVal</DataField>
+        </Field>
+        <Field Name="SaleValFormat">
+          <DataField>SaleValFormat</DataField>
+        </Field>
+        <Field Name="ItemSaleM3">
+          <DataField>ItemSaleM3</DataField>
+        </Field>
+        <Field Name="ItemSaleM3Format">
+          <DataField>ItemSaleM3Format</DataField>
+        </Field>
+        <Field Name="AdjustQty">
+          <DataField>AdjustQty</DataField>
+        </Field>
+        <Field Name="AdjustQtyFormat">
+          <DataField>AdjustQtyFormat</DataField>
+        </Field>
+        <Field Name="AdjustVal">
+          <DataField>AdjustVal</DataField>
+        </Field>
+        <Field Name="AdjustValFormat">
+          <DataField>AdjustValFormat</DataField>
+        </Field>
+        <Field Name="ItemAdjustM3">
+          <DataField>ItemAdjustM3</DataField>
+        </Field>
+        <Field Name="ItemAdjustM3Format">
+          <DataField>ItemAdjustM3Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

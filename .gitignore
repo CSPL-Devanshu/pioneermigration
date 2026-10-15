@@ -1,0 +1,15 @@
+# Downloaded AL dependency packages
+.alpackages/
+
+# Compiled Business Central extension packages
+*.app
+
+# Generated AL cache files
+.vscode/.alcache/
+
+# Temporary test runner files
+.altestrunner/
+
+# Local Business Central environment configuration
+.vscode/launch.json
+.vscode/rad.json
