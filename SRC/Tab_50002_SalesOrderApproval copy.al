@@ -1,4 +1,4 @@
-permissionset 50000 "Sales Order Approval Perm"
+permissionset 50001 "Sales Order Approval Perm"
 {
     Permissions = table "Sales Order Approval" = X,
         tabledata "Sales Order Approval" = RIMD,
